@@ -1,9 +1,9 @@
 import NoResults from '@/components/NoResults';
 import PostListItem from '@/components/PostListItem';
+import { posts } from '@/types';
 import { router } from 'expo-router';
 import React from 'react';
 import { FlatList, View } from 'react-native';
-import posts from '../../../assets/data/posts.json';
 
 const HomeScreen = () => {
     const handleCardPress = (id: string) => router.push(`/detail/${id}`)
