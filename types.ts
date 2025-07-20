@@ -227,3 +227,137 @@ export type User = {
   }
 ]
 
+export const comments : Comment[] = [
+  {
+    "id": "comment-1",
+    "post_id": "post-1",
+    "user_id": "user-xyz",
+    "parent_id": null,
+    "comment": "Very nice explanation. Detailed, straight to the point and with valid comparisons!",
+    "created_at": "2025-02-19T12:00:00Z",
+    "upvotes": 12,
+    "user": {
+      "id": "user-1",
+      "name": "u/User1",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/11.png"
+    },
+    "replies": [
+      {
+        "id": "comment-2",
+        "post_id": "post-1",
+        "user_id": "user-abc",
+        "parent_id": "comment-1",
+        "comment": "Totally agree!",
+        "created_at": "2025-02-19T12:05:00Z",
+        "upvotes": 18,
+        "user": {
+          "id": "user-2",
+          "name": "u/User2",
+          "image": null
+        },
+        "replies": []
+      }
+    ]
+  },
+  {
+    "id": "comment-3",
+    "post_id": "post-1",
+    "user_id": "user-def",
+    "parent_id": null,
+    "comment": "Nicely written, keep up the good work!",
+    "created_at": "2025-02-19T12:02:00Z",
+    "upvotes": 4,
+    "user": {
+      "id": "user-9",
+      "name": "u/User9",
+      "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/10.png"
+    },
+    "replies": [
+      {
+        "id": "comment-4",
+        "post_id": "post-1",
+        "user_id": "user-ghi",
+        "parent_id": "comment-3",
+        "comment": "Yep, wanted to say exactly the same",
+        "created_at": "2025-02-20T10:06:00Z",
+        "upvotes": 2,
+        "user": {
+          "id": "user-7",
+          "name": "u/User7",
+          "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.png"
+        },
+        "replies": [
+          {
+            "id": "comment-5",
+            "post_id": "post-1",
+            "user_id": "user-jkl",
+            "parent_id": "comment-4",
+            "comment": "Totally!",
+            "created_at": "2025-02-20T12:08:00Z",
+            "upvotes": 1,
+            "user": {
+              "id": "user-9",
+              "name": "u/User9",
+              "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png"
+            },
+            "replies": []
+          }
+        ]
+      }
+    ]
+  }
+]
+
+export const groups : Group[] =[
+  {
+    "id": "group-1",
+    "name": "r/FrontendDevelopers",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/11.png"
+  },
+  {
+    "id": "group-2",
+    "name": "r/ReactEnthusiasts",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/10.png"
+  },
+  {
+    "id": "group-3",
+    "name": "r/WebDevelopers",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/9.png"
+  },
+  {
+    "id": "group-4",
+    "name": "r/JSDevelopers",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/8.png"
+  },
+  {
+    "id": "group-5",
+    "name": "r/AIInnovators",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/7.png"
+  },
+  {
+    "id": "group-6",
+    "name": "r/TypeScriptCommunity",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/6.png"
+  },
+  {
+    "id": "group-7",
+    "name": "r/ReactJS",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/5.jpg"
+  },
+  {
+    "id": "group-8",
+    "name": "r/ServerlessTech",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/4.jpg"
+  },
+  {
+    "id": "group-9",
+    "name": "r/WebAccessibility",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/3.jpg"
+  },
+  {
+    "id": "group-10",
+    "name": "r/PWADevs",
+    "image": "https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/2.jpg"
+  }
+]
+

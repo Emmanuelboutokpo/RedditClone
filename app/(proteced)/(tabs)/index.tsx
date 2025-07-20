@@ -14,7 +14,7 @@ const HomeScreen = () => {
           renderItem={({ item }) => ( <PostListItem item={item}  onPress={() => { handleCardPress(item.id)}} />)}
           keyExtractor={(item) => `posts-${item.id}`} 
           ListEmptyComponent={<NoResults />}
-          contentContainerClassName="flex gap-5 mt-5"
+          contentContainerClassName="flex gap-5 mt-5 pb-10"
       />
      
     </View>

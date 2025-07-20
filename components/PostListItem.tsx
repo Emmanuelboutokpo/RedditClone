@@ -7,22 +7,25 @@ import { Image, Text, TouchableOpacity, View } from 'react-native';
 
 type PostListItemProps = {
   item: Post;
-  onPress : ()=>void;
+  onPress? : ()=>void;
   isDetailedPost?: boolean;
 }
 
-export default function PostListItem({ item,onPress } : PostListItemProps) {
+export default function PostListItem({ item, isDetailedPost, onPress } : PostListItemProps) {
   return (
      <TouchableOpacity onPress={onPress} className='px-4'>
-      <View className='flex-row items-center'>
-        <Image source={{ uri: item.group.image }} className=' mr-1 w-8 h-8 rounded-full ' />
-        <Text className='text-base font-bold mr-4'>{item.group.name}</Text>
+      <View className={`${!isDetailedPost? 'items-center' : ""} flex-row justify-center`}>
+        <Image source={{ uri: item.group.image }} className={`${isDetailedPost? 'mt-2' : ""} mr-1 w-8 h-8 rounded-full`} />
+        <View className='flex-col justify-center item-center'>
+            <Text className='text-base font-bold mr-4'>{item.group.name}</Text>
+            {isDetailedPost && <Text > {item?.user.name} </Text>}
+        </View>
         <Text className='text-base  text-gray-400 '>{formatDistanceToNowStrict(item.created_at)}</Text>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-blue-600 rounded-xl ml-auto h-6 w-11 items-center justify-center"
+          className="bg-primary-400 rounded-xl ml-auto h-6 w-11 items-center justify-center"
         >
-          <Text className=" text-sm font-bold text-white ">Join</Text>
+          <Text className=" text-sm font-bold text-primary-600 ">Join</Text>
         </TouchableOpacity>
       </View>
       <View className="pt-2">
@@ -30,7 +33,7 @@ export default function PostListItem({ item,onPress } : PostListItemProps) {
         {item.image && <Image source={{ uri: item.image }} className=' w-full mt-3 h-60 rounded-lg ' resizeMode='cover' />}
       </View>
       <View>
-        {item.description && <Text numberOfLines={4}> {item.description} </Text>}
+        {(item.description && !item.image) && <Text numberOfLines={isDetailedPost?undefined:4}> {item.description} </Text>}
       </View>
 
       <View className='flex-row items-center  mt-4'>
