@@ -33,7 +33,7 @@ export default function PostListItem({ item, isDetailedPost, onPress } : PostLis
         {item.image && <Image source={{ uri: item.image }} className=' w-full mt-3 h-60 rounded-lg ' resizeMode='cover' />}
       </View>
       <View>
-        {(item.description && !item.image) && <Text numberOfLines={isDetailedPost?undefined:4}> {item.description} </Text>}
+        {(item.description) && <Text numberOfLines={isDetailedPost?undefined:4}> {item.description} </Text>}
       </View>
 
       <View className='flex-row items-center  mt-4'>
