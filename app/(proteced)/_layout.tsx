@@ -24,6 +24,7 @@ export default function ProtectedLayout() {
  return (
     <Stack>
       <Stack.Screen name='(tabs)' options={{headerShown : false}} />
+      <Stack.Screen name='groupSelector' options={{headerShown : false}} />
       <Stack.Screen 
          name='detail/[id]' 
          options={{ 

@@ -37,24 +37,24 @@ export default function PostListItem({ item, isDetailedPost, onPress } : PostLis
       </View>
 
       <View className='flex-row items-center  mt-4'>
-        <View className='bg-accent-100 rounded-3xl mr-4 flex-row items-center justify-center'>
+        <View className='bg-accent-200 rounded-3xl mr-4 flex-row items-center justify-center'>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-accent-100 rounded-full size-10 items-center justify-center"
+          className="bg-accent-200 rounded-full size-10 items-center justify-center"
         >
           <MaterialCommunityIcons name="arrow-up-bold-outline" size={19} color="black" />
         </TouchableOpacity>
           <Text className='font-bold'>{item.upvotes}</Text>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-accent-100 rounded-full size-10 items-center justify-center"
+          className="bg-accent-200 rounded-full size-10 items-center justify-center"
         >
           <MaterialCommunityIcons name="arrow-down-bold-outline" size={19} color="black" />
         </TouchableOpacity>
         </View>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-accent-100 rounded-3xl h-10 mr-4 w-16 flex-row items-center justify-center"
+          className="bg-accent-200 rounded-3xl h-10 mr-4 w-16 flex-row items-center justify-center"
         >
            <MaterialCommunityIcons name="comment-outline" size={19} color="black" />
            <Text className='font-bold text-sm ml-1'>{item.nr_of_comments}</Text>
@@ -62,13 +62,13 @@ export default function PostListItem({ item, isDetailedPost, onPress } : PostLis
         <View className='flex-row ml-auto items-center justify-center'>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-accent-100 rounded-2xl size-10 mr-4 flex-row items-center justify-center"
+          className="bg-accent-200 rounded-2xl size-10 mr-4 flex-row items-center justify-center"
         >
           <MaterialCommunityIcons name="trophy-outline" size={19} color="black" />
         </TouchableOpacity>
         <TouchableOpacity
           // onPress={() => router.back()}
-          className="bg-accent-100 rounded-2xl size-10 flex-row items-center justify-center"
+          className="bg-accent-200 rounded-2xl size-10 flex-row items-center justify-center"
         >
           <MaterialCommunityIcons name="share-outline" size={19} color="black" />
         </TouchableOpacity>
